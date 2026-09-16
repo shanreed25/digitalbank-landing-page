@@ -44,15 +44,21 @@
     
   </header>
 
-  <section id="hero">
-      <h1>Next generation digital banking</h1>
+  <section id="hero" class="flex flex-col justify-center items-center gap-6 p-5">
 
-      <p>
+
+      <h1 class=" text-center text-4xl">Next generation digital banking</h1>
+
+      <!-- Why text-center: <p> tag is full width by default (block element), items-center won’t 
+        make the text appear centered, it will just center the element box
+         so even though the box is centered, the text is left-aligned inside it
+         -->
+      <p class="text-center">
         Take your financial life online. Your Digitalbank account will be a one-stop-shop 
         for spending, saving, budgeting, investing, and much more.
       </p>
 
-      <a>Request Invite</a>
+      <button class="bg-gradient-to-b from-[#32d25d] to-[#2cb6d8] rounded-full p-2"><a>Request Invite</a></button>
   </section>
 
 
