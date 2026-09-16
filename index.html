@@ -8,6 +8,9 @@
   
   <title>Frontend Mentor | Digitalbank landing page</title>
 
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 0.6875rem; text-align: center; }
@@ -15,8 +18,19 @@
   </style>
 </head>
 <body>
-  <header>
-    <nav>
+  <!-- relative says : If any child uses absolute, position it relative to this  -->
+  <header class="relative bg-[url(./images/bg-intro-mobile.svg)] bg-no-repeat grid grid-cols-1">
+    <!-- Without relative on the <header>, that absolute element would look for another positioned ancestor, potentially the page itself. -->
+    <div class="absolute w-full bg-white">
+      <img src="./images/logo-dark.svg" alt="" width="154" height="22">
+      <img src="./images/icon-hamburger.svg" alt="" width="24" height="9">
+    </div>
+    
+    <div class="">
+      <img src="./images/image-mockups.png" alt="mobile phones proof" class="mt-[-100px]">
+    </div>
+
+    <!-- <nav class="bg-green-800 h-80 w-80 max-w-lg fixed top-20 left-350">
       <ul>
         <li><a>Home</a></li>
         <li><a>About</a></li>
@@ -25,7 +39,9 @@
         <li><a>Careers</a></li>
         <li><a>Request Invite</a></li>
       </ul>
-    </nav>
+    </nav> -->
+
+    
   </header>
 
   <section id="hero">
