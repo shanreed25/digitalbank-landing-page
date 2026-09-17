@@ -19,15 +19,43 @@
 </head>
 <body>
   <!-- relative says : If any child uses absolute, position it relative to this  -->
-  <header class="relative bg-[url(./images/bg-intro-mobile.svg)] bg-no-repeat grid grid-cols-1">
-    <!-- Without relative on the <header>, that absolute element would look for another positioned ancestor, potentially the page itself. -->
-    <div class="absolute w-full bg-white">
-      <img src="./images/logo-dark.svg" alt="" width="154" height="22">
-      <img src="./images/icon-hamburger.svg" alt="" width="24" height="9">
-    </div>
-    
-    <div class="">
-      <img src="./images/image-mockups.png" alt="mobile phones proof" class="mt-[-100px]">
+  <!-- Without relative on the <header>, that absolute element would look for another positioned ancestor, potentially the page itself. -->
+  <header class="relative bg-[#f3f4f6] 
+                   grid 
+                   grid-cols-1 
+                   md:grid-cols-2
+                   md:[direction:rtl]
+                   ">
+  <!-- md:grid-cols-[1fr_320px] -->
+    <div>
+      <div class="absolute z-10 w-full bg-white">
+        <!-- <div class=""> -->
+        <img src="./images/logo-dark.svg" alt="" width="154" height="22">
+        <img src="./images/icon-hamburger.svg" alt="" width="24" height="9">
+      </div>
+  
+      <div class="  bg-[url('./images/bg-intro-mobile.svg')]
+                    md:bg-[url('./images/bg-intro-desktop.svg')]
+                    bg-no-repeat
+                    bg-cover
+                    bg-center
+                    h-[580px]
+                    md:bg-contain
+      
+                    
+                   
+                    md:bg-position-[top_right_-9rem]
+                    md:bg-cover
+                  ">
+
+            <!-- <img class="mx-auto md:translate-x-[125px] md:translate-y-[-90px] md:w-[380px]" src="./images/image-mockups.png" alt="mobile phones proof"> -->
+        <img class="mx-auto    
+                    w-[400px]
+                    md:w-[350px]
+                    mt-[-100px]
+                    md:mt-[-150px]
+                    md:translate-x-[150px]" src="./images/image-mockups.png" alt="mobile phones proof">
+      </div>
     </div>
 
     <!-- <nav class="bg-green-800 h-80 w-80 max-w-lg fixed top-20 left-350">
@@ -41,10 +69,7 @@
       </ul>
     </nav> -->
 
-    
-  </header>
-
-  <section id="hero" class="flex flex-col justify-center items-center gap-6 p-5">
+      <div id="hero" class="max-w-sm mx-auto flex flex-col justify-center items-center gap-6 p-5 ">
 
 
       <h1 class=" text-center text-4xl">Next generation digital banking</h1>
@@ -53,13 +78,16 @@
         make the text appear centered, it will just center the element box
          so even though the box is centered, the text is left-aligned inside it
          -->
-      <p class="text-center">
+      <p class="text-center text-[#9698a6] text-base/4">
         Take your financial life online. Your Digitalbank account will be a one-stop-shop 
         for spending, saving, budgeting, investing, and much more.
       </p>
 
-      <button class="bg-gradient-to-b from-[#32d25d] to-[#2cb6d8] rounded-full p-2"><a>Request Invite</a></button>
-  </section>
+      <button class="text-white bg-gradient-to-b from-[#32d25d] to-[#2cb6d8] rounded-full px-8 py-2"><a>Request Invite</a></button>
+  </div>
+
+    
+  </header>
 
 
   <section id="why">
